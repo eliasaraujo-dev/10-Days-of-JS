@@ -67,3 +67,40 @@ function factorial(n){
         return n*factorial(n-1);
     }
 }
+```
+## 005 Day 1: Let and Const
+```js
+function main(){
+    // Write your code here. Read input using 'readLine()' and print output using 'console.log()'.
+    const PI = Math.PI;
+    const r = +(readLine());
+
+    // Print the area of the circle:
+    console.log(PI*r*r);
+
+    // Print the perimeter of the circle:
+    console.log(2*PI*r);
+}
+```
+## 006 Day 2: Conditional Statements: If-Else
+```js
+function getGrade(score) {
+    let grade;
+    // Write your code here
+    if(score>25 && score<=25){
+        grade = 'A';
+    }
+    else if(score>20 && score<=25>){
+        grade = 'B';
+    }
+
+    else if(score>10 && score<=20>){
+        grade = 'C';
+    }
+
+    else if(score>10 && score<=15>){
+        grade = 'E';
+    }
+
+    return grade;
+}
