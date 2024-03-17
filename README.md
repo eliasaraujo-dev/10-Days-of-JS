@@ -231,3 +231,15 @@ class Polygon{
 Rectangle.prototype.area = function(){
     return this.w * this.h;
 }
+
+/*
+ * Create a Square thats inherits from Rectangle and implement its class constructor
+ */
+
+class Square extends Rectangle{
+    constructor(s){
+    super(s);
+    this.h=s;
+    this.w=s;
+    }
+}
