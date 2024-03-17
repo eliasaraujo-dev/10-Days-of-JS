@@ -1,19 +1,14 @@
-function getLetter(s){
-    let letter;
-    var firstletter = s[0];
-    switch(true){
-        case "aeiou".includes(firstletter):
-            letter = 'A';
-            break
-        case "bcdfg".includes(firstletter):
-            letter = 'B';
-            break;
-        case "hjklm".includes(firstletter):
-            letter = 'C';
-            break;
-        case "npqrstvwxyz".includes(firstletter):
-            letter = 'D';
-            break;    
+function vowelsAndConsonants(s){
+    let vowels = 'aeiou';
+    var consonants = '';
+    for(let i = 0; i < s.length; i++){
+        if(vowels.includes(s[i])){
+            console.log(s[i])
+        }
+        else{
+            consonants += s[i] + '\n';
+        }
     }
-    return letter;
+    console.log(consonants.trim());
 }
+vowelsAndConsonants()

@@ -142,3 +142,92 @@ function vowelsAndConsonants(s){
     }
     console.log(consonants.trim());
 }
+```
+## 009 Day 3: Arrays
+```js
+function getSecondLargest(nums) {
+    // Complete
+    let first = nums[0];
+    let second = -1;
+    for(let i=0; i<nums.length;i++>){
+        if(nums[i]>first){
+            second = first;
+            first = nums[i];
+        }
+        if(nums[i] > second && nums[i] < first){
+            second = nums[i];
+        }
+    }
+    return second;
+}
+```
+## 010 Day3: Try Catch, and Finally
+```js
+function reverseString(s){
+    try{
+        console.log(s.split('').reverse().join(''));
+    }
+    catch(e){
+        console.log(e.message);
+        console.log(s);
+    }
+}
+```
+## 011 Day 3: Throw
+```js
+function isPositive(a){
+    if(a>0){
+        return 'YES';
+    }
+    else if(a==0){
+        throw new Error('Zero Error');
+    }
+    else if(a<0){
+        throw new Error('Negative Error');
+    }
+}
+```
+## 012 Day 4: Create a Rectangle Object
+```js
+function Rectangle(a, b){
+    this.length = a;
+    this.width = b;
+    this.perimeter = 2*(a+b);
+    this.area = a*b;
+}
+```
+## 013 Day 4: Count Objects
+```js
+function getCount(objects){
+    var count = 0;
+    for(let o of objects){
+        if(o.x == o.y){
+            count += 1;
+        }
+    }
+    return count;
+}
+```
+## 014 Day 4: Classes
+```js
+class Polygon{
+    constructor(sides){
+        this.sides = sides;
+    }
+    perimeter(){
+        var sum = 0;
+        for(let i=0;i<this.sides.length; i++){
+            sum += this.sides[i];
+        }
+    }
+}
+```
+## 015 Day: 5: Inheritance
+```js
+/*
+* Write code tha adds an 'area' method to the Rectangle class' prototype
+*/
+
+Rectangle.prototype.area = function(){
+    return this.w * this.h;
+}
