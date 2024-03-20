@@ -2,32 +2,38 @@
 
 ## 001 Day 0: Hello, World!
 ```js
+// Este código é uma função chamada `greeting` que aceita um parâmetro de entrada chamado `parameterVariable`.
 function greeting(parameterVariable) {
-    // This line prints 'Hello, World!' to the console:
+    // Essa linha imprime 'Hello, World' no console:
     console.log('Hello, World!');
+    // Essa linha usa 'console.log()' para imprimir o valor do parâmetro. Isso mostrará o valor armazenado na função quando ela for chamada.
     console.log(parameterVariable);
+    // Aqui está um exemplo de como você poderia chamar a função `greeting` e o que seria impresso no console:
+    javascript
+    greeting('Hello, World!');
+}
 ```
 ## 002 Day 0: Data Types
 ```js
 function performOperation(secondInteger, secondDecimal, secondString) {
-    // Declare a variable named 'firstInteger' and initialize with integer value 4.
+    // Declare uma variável chamada 'firstInteger' e inicialize com o valor 4.
     const firstInteger = 4;
     
-    // Declare a variable named 'firstDecimal' and initialize with floating-point value 4.0.
+    // Declare uma variável chamada 'firstDecimal' e inicialize com o valor de ponto flutuante 4.0.
     const firstDecimal = 4.0;
     
-    // Declare a variable named 'firstString' and initialize with the string "HackerRank".
+    // Declare uma variável 'firstString' e inicialize com a string "HackerRank".
     const firstString = 'HackerRank ';
     
-    // Write code that uses console.log to print the sum of the 'firstInteger' and 'secondInteger' (converted to a Number        type) on a new line.
+    // Escreva o código que usa console.log para imprimir a soma de 'firstInteger' e 'secondInteger' (Usa parseInt para converter para o tipo Number(inteiro)) em uma nova linha.
     console.log(firstInteger+ parseInt(secondInteger, 10));
     
-    
-    // Write code that uses console.log to print the sum of 'firstDecimal' and 'secondDecimal' (converted to a Number            type) on a new line.
+
+    // O código usa console.log para imprimir a soma de 'firstDecimal' e 'secondDecimal' (Usa parseFloat para converter para o tipo Number(flutuante)) em uma nova linha.
     console.log(firstDecimal+ parseFloat(secondDecimal));
     
-    
-    // Write code that uses console.log to print the concatenation of 'firstString' and 'secondString' on a new line. The        variable 'firstString' must be printed first.
+
+    // O código usa console.log para imprimir a concatenação de 'firstString' e 'secondString' em uma nova linha. A variável 'firstString' deve ser impressa primeiro.
     console.log(firstString+ secondString);
     
 }
@@ -43,12 +49,13 @@ function getArea(length, width) {
 }
 
 /**
-* Calculate the perimeter of a rectangle
+* Calcular o perímetro de um retângulo.
 *
-*   length: The length of the rectangle.
-*   width: The width of the rectangle.
+*   length: O comprimento do retângulo.
+*   width: A largura do retângulo.
 *
 *   Return a number denoting the perimeter of rectangle.
+    Retorna um número que representa o perímetro do retângulo.
 **/
 function getPerimeter(length, width){
     let perimeter;
@@ -56,14 +63,19 @@ function getPerimeter(length, width){
 
     return perimeter;
 }
+
 ```
 ## 004 Day 1: Functions
 ```js
+// A função factorial recebe um parâmetro 'n', que representa o número para o qual se deseja calcular o fatorial.
 function factorial(n){
+    // Verifica se (n) é igual a 1. Se for, ele retorna 1, pois o fatorial de 1 é 1. Essa é a condição de parada da recursão.
     if(n==1){
         return 1;
     }
+    // Senão, a função chama a si mesma, passando como argumento n-1 (ou seja, um número menor do que n).
     else{
+        // Multiplica n pelo resultado da chamada recursiva, que é o fatorial de n-1. Esse passo é repetido até que n seja igual a 1.
         return n*factorial(n-1);
     }
 }
@@ -267,5 +279,5 @@ function modifyArray(nums){
             return s*3;
         }
     });
-    return modifiednums;
+    return modified;
 }
